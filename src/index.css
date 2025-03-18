@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "Itaú Display";
+  font-weight: 400;
+  src: url("/fonts/ItauDisplayPro-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Itaú Display";
+  font-weight: 700;
+  src: url("/fonts/ItauDisplayPro-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Itaú";
+  font-weight: 400;
+  src: url("/fonts/ItauTextPro_W_Rg.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Itaú";
+  font-weight: 700;
+  src: url("/fonts/ItauTextPro_W_Bd.woff") format("woff");
+}
+
+* {
+  font-family: "Itaú";
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 12px;
+}
+
+body {
+  margin: 0;
+}
+
+:root {
+  font-size: 12px;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+
+.error-tooltip {
+  background-color: #c1121f;
+  color: #fff;
+}
+
+.error-tooltip__progress-bar {
+  background-color: #fff;
+}

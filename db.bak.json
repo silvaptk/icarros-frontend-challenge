@@ -1,0 +1,194 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Peugeot 208",
+      "car": {
+        "id": 1,
+        "brand": "Peugeot",
+        "model": "208 Active (Aut) automático",
+        "modelYear": 2022,
+        "productionYear": 2023,
+        "price": 54500,
+        "kilometers": 30500
+      },
+      "author": {
+        "id": 1,
+        "name": "Localiza Seminovos",
+        "email": "seminovos@localiza.com.br",
+        "city": "São Paulo",
+        "state": "SP",
+        "phone": "(11) 9 9192-9394"
+      },
+      "isFavorite": false,
+      "images": ["/images/208-1.jpg", "/images/208-2.jpg", "/images/208-3.webp"]
+    },
+    {
+      "id": 2,
+      "title": "Fiat Argo",
+      "car": {
+        "id": 2,
+        "brand": "Fiat",
+        "model": "1.0 Firefly Drive",
+        "modelYear": 2022,
+        "productionYear": 2023,
+        "price": 54500,
+        "kilometers": 30500
+      },
+      "author": {
+        "id": 1,
+        "name": "Localiza Seminovos",
+        "email": "seminovos@localiza.com.br",
+        "city": "São Paulo",
+        "state": "SP",
+        "phone": "(11) 9 9192-9394"
+      },
+      "isFavorite": false,
+      "images": [
+        "/images/argo-1.png",
+        "/images/argo-2.jpg",
+        "/images/argo-3.webp"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Volkswagen Gol",
+      "car": {
+        "id": 3,
+        "brand": "Volkswagen",
+        "model": "Gol 1.0 12V MPI",
+        "modelYear": 2022,
+        "productionYear": 2023,
+        "price": 59900,
+        "kilometers": 52212
+      },
+      "author": {
+        "id": 2,
+        "name": "Movida Seminovos",
+        "email": "seminovos@movida.com.br",
+        "city": "São Paulo",
+        "state": "SP",
+        "phone": "(11) 9 9998-9796"
+      },
+      "isFavorite": false,
+      "images": [
+        "/images/gol-1.jpg",
+        "/images/gol-2.jpg",
+        "/images/gol-3.jpg",
+        "/images/gol-4.webp"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Hyundai HB20",
+      "car": {
+        "id": 4,
+        "brand": "Hyundai",
+        "model": "HB20 1.0 12V Flex Comfort Plus",
+        "modelYear": 2022,
+        "productionYear": 2023,
+        "price": 59900,
+        "kilometers": 52212
+      },
+      "author": {
+        "id": 2,
+        "name": "Movida Seminovos",
+        "email": "seminovos@movida.com.br",
+        "city": "São Paulo",
+        "state": "SP",
+        "phone": "(11) 9 9998-9796"
+      },
+      "isFavorite": false,
+      "images": [
+        "/images/hb20-1.jpg",
+        "/images/hb20-2.jpeg",
+        "/images/hb20-3.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Volkswagen Polo",
+      "car": {
+        "id": 5,
+        "brand": "Volkswagen",
+        "model": "Polo 1.6 16V MSI Comfortline",
+        "modelYear": 2024,
+        "productionYear": 2024,
+        "price": 91920,
+        "kilometers": 13120
+      },
+      "author": {
+        "id": 3,
+        "name": "Unidas Seminovos",
+        "email": "seminovos@unidas.com.br",
+        "city": "Belo Horizonte",
+        "state": "MG",
+        "phone": "(31) 9 8182-8384"
+      },
+      "isFavorite": false,
+      "images": [
+        "/images/polo-1.webp",
+        "/images/polo-2.jpg",
+        "/images/polo-3.webp",
+        "/images/polo-4.webp"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Fiat Mobi",
+      "car": {
+        "id": 6,
+        "brand": "Fiat",
+        "model": "Mobi 1.0 12V Like",
+        "modelYear": 2024,
+        "productionYear": 2024,
+        "price": 49990,
+        "kilometers": 85480
+      },
+      "author": {
+        "id": 3,
+        "name": "Unidas Seminovos",
+        "email": "seminovos@unidas.com.br",
+        "city": "Belo Horizonte",
+        "state": "MG",
+        "phone": "(31) 9 8182-8384"
+      },
+      "isFavorite": false,
+      "images": [
+        "/images/mobi-1.png",
+        "/images/mobi-2.webp",
+        "/images/mobi-3.jpeg",
+        "/images/mobi-4.jpeg",
+        "/images/mobi-5.jpeg"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Renault Sandero",
+      "car": {
+        "id": 7,
+        "brand": "Renault",
+        "model": "Sandero 1.6 16V SCE",
+        "modelYear": 2020,
+        "productionYear": 2020,
+        "price": 64990,
+        "kilometers": 47168
+      },
+      "author": {
+        "id": 4,
+        "name": "Patrick Silva",
+        "email": "patrick.silva@email.com",
+        "city": "Santa Bárbara d'Oeste",
+        "state": "SP",
+        "phone": "(19) 9 8485-8687"
+      },
+      "isFavorite": false,
+      "images": [
+        "/images/sandero-1.webp",
+        "/images/sandero-2.jpeg",
+        "/images/sandero-3.webp",
+        "/images/sandero-4.webp"
+      ]
+    }
+  ]
+}

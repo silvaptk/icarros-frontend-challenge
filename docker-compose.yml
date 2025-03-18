@@ -1,0 +1,29 @@
+services:
+  app:
+    build: 
+      dockerfile: ./dockerfiles/app.dockerfile
+      context: .
+    volumes:
+      - ".:/app"
+      - "/app/node_modules"
+    ports: 
+      - "5173:5173"
+    depends_on:
+      - json-server
+  json-server:
+    image: node
+    working_dir: /app
+    volumes:
+      - "./db.json:/app/db.json"
+    command: "npx json-server -p 3001 db.json"
+    ports:
+      - "3001:3001"
+  tests:
+    build: 
+      dockerfile: ./dockerfiles/tests.dockerfile
+      context: .
+    volumes:
+      - ".:/app"
+      - "/app/node_modules"
+    stdin_open: true
+    tty: true
