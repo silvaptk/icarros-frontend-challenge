@@ -14,8 +14,8 @@ services:
     image: node
     working_dir: /app
     volumes:
-      - "./db.json:/app/db.json"
-    command: "npx json-server -p 3001 db.json"
+      - ".:/app"
+    command: npx json-server -p 3001 db.json --host 0.0.0.0
     ports:
       - "3001:3001"
   tests:
