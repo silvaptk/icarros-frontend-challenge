@@ -2,7 +2,10 @@ import * as Sentry from '@sentry/react'
 
 export function setupLogging() {
   Sentry.init({
-    dsn: import.meta.env.SENTRY_DSN,
+    dsn: import.meta.env.VITE_SENTRY_DSN,
+    tracesSampleRate: 1.0, 
+    environment: import.meta.env.VITE_APP_ENV || 'development',
+    debug: true,
   })
 }
 
