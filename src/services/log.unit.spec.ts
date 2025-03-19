@@ -16,11 +16,11 @@ describe('Log service unit tests', () => {
 
     test('forwards the Sentry DSN to the `init` function', () => {
       const sentryDSN = 'DUMMY_DSN'
-      import.meta.env.SENTRY_DSN = sentryDSN
+      import.meta.env.VITE_SENTRY_DSN = sentryDSN
 
       setupLogging()
 
-      expect(init).toHaveBeenCalledWith({ dsn: sentryDSN })
+      expect(init).toHaveBeenCalledWith(expect.objectContaining({ dsn: sentryDSN }))
     })
   })
 })
