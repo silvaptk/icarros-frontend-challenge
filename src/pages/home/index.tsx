@@ -1,34 +1,47 @@
-import { useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import usePosts from '@/hooks/data/usePosts'
 import Header from '@/components/layout/Header'
 import PostsList from '@/components/pages/index/PostsList'
 import ContactModal from '@/components/pages/index/ContactModal'
+import { useSearchParams } from 'react-router'
 
 export default function HomePage() {
-  const [brandSearchText, setBrandSearchText] = useState('')
+  const [searchParams, setSearchParams] = useSearchParams()
+
+  const [brandSearchText, setBrandSearchText] = useState(
+    searchParams.get('brand') || '',
+  )
+  const [submittedSearch, setSubmittedSearch] = useState(brandSearchText)
   const [showLoadingIndicator, setShowLoadingIndicator] = useState(false)
 
-  const debounceTimeoutRef = useRef<ReturnType<typeof setTimeout>>(null)
+  const { posts, postsAreLoading } = usePosts({
+    brandSearchText: submittedSearch,
+  })
 
-  const { posts, postsAreLoading } = usePosts({ brandSearchText })
+  useEffect(() => {
+    setBrandSearchText(searchParams.get('brand') || '')
+  }, [searchParams])
 
-  function handleSearchChange(searchText: string) {
-    if (debounceTimeoutRef.current) {
-      clearTimeout(debounceTimeoutRef.current)
-    }
-
+  useEffect(() => {
     setShowLoadingIndicator(true)
 
-    debounceTimeoutRef.current = setTimeout(() => {
-      setBrandSearchText(searchText)
+    const debounceTimeout = setTimeout(() => {
+      setSubmittedSearch(brandSearchText)
       setShowLoadingIndicator(false)
+      if ((searchParams.get('brand') || "") !== brandSearchText) {
+        setSearchParams({ brand: brandSearchText })
+      }
     }, 500)
-  }
+
+    return () => {
+      clearTimeout(debounceTimeout)
+    }
+  }, [brandSearchText, setSearchParams, searchParams])
 
   return (
     <>
-      <Header onSearchChange={handleSearchChange} />
+      <Header search={brandSearchText} onSearchChange={setBrandSearchText} />
       <PostsList
         data={posts || []}
         isLoading={postsAreLoading || showLoadingIndicator}

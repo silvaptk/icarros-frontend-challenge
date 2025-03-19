@@ -4,10 +4,11 @@ import SearchIcon from '@/assets/icons/search.svg?react'
 import { preventSubmission } from '@/utils/events'
 
 interface SearchInputProps {
+  value?: string 
   onChange?: (searchText: string) => void
 }
 
-export default function SearchInput({ onChange }: SearchInputProps) {
+export default function SearchInput({ onChange, value }: SearchInputProps) {
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
     onChange?.(event.target.value)
   }
@@ -19,6 +20,7 @@ export default function SearchInput({ onChange }: SearchInputProps) {
         placeholder="busque por marca"
         onChange={handleChange}
         data-testid="search-input"
+        value={value}
       />
     </S.Container>
   )
